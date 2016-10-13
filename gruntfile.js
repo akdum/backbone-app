@@ -9,7 +9,7 @@ module.exports = function (grunt) {
                 files:{
                 'build/external.min.js' : ['js/external/handlebars-v4.0.5.js',
                 'js/external/moment.min.js',
-                'js/external/tether.min.js']
+                'js/external/tether.js']
                 }
             },
             app: {
