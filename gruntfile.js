@@ -3,7 +3,8 @@ module.exports = function (grunt) {
         pkg: grunt.file.readJSON('package.json'),
         uglify: {
             options: {
-                banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+                banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n',
+                report: 'min'
             },
             externalLibraries: {
                 files:{
@@ -35,13 +36,21 @@ module.exports = function (grunt) {
                 files: {
                     src: ['js/app/**/*.js']
                 },
+            },
+            cssmin:{
+                combine:{
+                    files: {
+                    'build/app.min.css' : ['css/**.css']
+                    }
+                }
             }
     });
     // Load the plugin that provides the "uglify" task.
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
 
     //grunt.registerTask('default', ['jshint']);
     // Default task(s).
-    grunt.registerTask('default', ['uglify']);    
+    grunt.registerTask('default', ['uglify','cssmin']);    
 }
