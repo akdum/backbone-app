@@ -1,0 +1,44 @@
+.row-offset {
+    margin-top: 1rem;
+}
+ul {
+    list-style: none;
+}
+.listview li {    
+    border-bottom: 1px solid #e1e8ed;
+}
+.user-tweet {
+    padding-top: 1rem;
+}
+.user-name {
+    font-weight: bold;
+}
+.timestamp {
+    margin-left: 1rem;
+}
+.media {
+    border-radius: 6px;
+    border: 1px solid #e1e8ed;
+}
+.media-left-profile {
+    height: 72px;
+    padding: 5px;
+    position: relative;
+    top: -2rem;
+    background-color: white;
+    border-radius: 6px;
+    left: 1rem;
+}
+.media-left-profile img {
+    height: 72px;
+}
+.media-heading {
+    padding-left: 7rem;
+}
+.bgUserBlock{
+    padding-bottom: 6rem;
+    background-color: #2B7BB9
+}
+.profile-image {
+    height: 0px;
+}
